@@ -9,20 +9,19 @@ import javax.inject.Inject;
 import static org.junit.Assert.assertNotNull;
 
 /**
- *
+ * Unit Tests for SimpleService
  */
 @RunWith(WeldJUnit4Runner.class)
-public class LogTest {
+public class SimpleServiceTest {
 
     @Inject
-    private SimpleService courseService;
+    private SimpleService simpleService;
 
     @Test
     public void testCDI() {
 
-        assertNotNull("The course service bean should be not null", courseService);
+        assertNotNull("The simple service bean should be not null", simpleService);
 
-        courseService.registerCourse("learning jave ee");
+        simpleService.processRequest("req-123");
     }
-
 }

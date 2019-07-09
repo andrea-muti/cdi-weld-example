@@ -6,8 +6,9 @@ package com.muti.cdi.weld.example.service;
 public interface SimpleService {
 
     /**
+     * Processes the request whose id is provided
      *
-     * @param course
+     * @param reqId the id of the request to process
      */
-    void registerCourse(String course);
+    void processRequest(String reqId);
 }

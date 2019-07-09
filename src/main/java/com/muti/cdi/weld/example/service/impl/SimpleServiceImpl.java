@@ -16,8 +16,13 @@ public class SimpleServiceImpl implements SimpleService {
     @Inject @Log
     private Logger LOG;
 
-    public void registerCourse(String course) {
+    /**
+     * Processes the request whose id is provided
+     *
+     * @param reqId the id of the request to process
+     */
+    public void processRequest(String reqId) {
 
-        LOG.info("adding course: " + course);
+        LOG.info("processing request id: {}", reqId);
     }
 }
